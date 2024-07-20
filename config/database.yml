@@ -1,0 +1,29 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: RiyaKhillan
+  host: localhost
+  port: 5432
+  database: task_manager_development
+
+development:
+  <<: *default
+  database: task_manager_development
+  username: postgres
+  password: RiyaKhillan
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: task_manager_test
+  username: postgres
+  password: RiyaKhillan
+  host: localhost
+  port: 5432
+
+production:
+  <<: *default
+  database: task_manager_production
